@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #Depot war dans Nexus
-LIBREPLAN="~/.jenkins/workspace/ConstructionWARLibreplan/libreplan-webapp/target"
 
-cd ${LIBREPLAN}
+
+cd /home/tomcat/.jenkins/workspace/ConstructionWARLibreplan/libreplan-webapp/target
 export WAR_FILE="libreplan-webapp.war"
 curl --fail -u admin:admin123 --upload-file ${WAR_FILE} ${IP_NEXUS}
 RET=$?
