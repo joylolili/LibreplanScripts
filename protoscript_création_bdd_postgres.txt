@@ -1,0 +1,22 @@
+Protoscript création BDD Postgres :
+
+echo "Lancement création des différentes bases Postgres"
+
+echo "Installation de Postgres"
+cd /var/lib
+	
+	if [ -e postgresql ]
+		then echo "PostgreSQL est déjà installé sur cette VM" && exit
+		else echo "PostgreSQL n'est pas présent sur cette VM" && cd $HOME && sudo apt-get install postgres postgres-client
+	fi
+	
+echo "Connection à Postgres via l'utilisateur Postgres"
+sudo -i -u postgres
+
+echo "Création des 3 bases de données nécessaires"
+CREATE DATABASE libreplan;
+CREATE DATABASE libreplandev;
+CREATE DATABASE libreplandevtest;
+CREATE USER libreplan WITH PASSWORD 'libreplan';
+GRANT ALL PRIVILEGES ON DATABASE libreplandev TO libreplan;
+GRANT ALL PRIVILEGES ON DATABASE libreplandevtest TO libreplan;

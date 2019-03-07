@@ -1,0 +1,2 @@
+
+-javaagent:PATH_TO_jacocoagent.jar=destfile=PATH_TO_DESTINATION_FILE_jacoco-it.exec,append=false
