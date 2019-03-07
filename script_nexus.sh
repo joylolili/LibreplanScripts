@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Depot war dans Nexus
-LIBREPLAN="/home/tomcat/.jenkins/workspace/ConstructionWARLibreplanlibreplan-webapp/target"
+LIBREPLAN="~/.jenkins/workspace/ConstructionWARLibreplan/libreplan-webapp/target"
 
 cd ${LIBREPLAN}
 export WAR_FILE="libreplan-webapp.war"
