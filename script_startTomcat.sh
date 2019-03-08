@@ -3,7 +3,7 @@
 LIBREPLAN=~/.jenkins/workspace/C
 TOMCAT1="${TOMCAT_B}/webapp"
 TOMCAT2="${TOMCAT_K}/webapp"
-TOMCAT3="${TOMCAT_J}/webapp"
+TOMCAT3="C:\Users\formation\Documents\Joy_cours\MODULE3\Projet3\apache-tomcat-8.5.38\webapp"
 
 # Recuperer war et copier dans 3 Tomcat
 cd ${LIBREPLAN}
