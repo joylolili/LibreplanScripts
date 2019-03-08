@@ -21,6 +21,22 @@
     <!--
         ===================================================================
     -->
+	<settings>
+	<pluginGroups>
+		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+	<pluginGroups>
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.host.url>http://localhost:9000</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
+	</settings>
     <!--
         Default values for properties. These default values are expected
         to be valid for most profiles. Specific profiles can overwrite
@@ -1089,7 +1105,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
         </plugins>
     </build>
 
